@@ -54,7 +54,7 @@ class EntityLoaderTest {
 
         this.persistenceContext = new PersistenceContextImpl();
 
-        this.entityPersister = new EntityPersister(jdbcTemplate);
+        this.entityPersister = new EntityPersister();
         this.entityLoader = new EntityLoader(jdbcTemplate);
     }
 

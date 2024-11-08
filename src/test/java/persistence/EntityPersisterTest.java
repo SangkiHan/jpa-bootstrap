@@ -44,7 +44,7 @@ public class EntityPersisterTest {
         jdbcTemplate.execute(OrderItemCreateQuery);
 
         this.entityLoader = new EntityLoader(jdbcTemplate);
-        this.entityPersister = new EntityPersister(jdbcTemplate);
+        this.entityPersister = new EntityPersister();
     }
 
     //정확한 테스트를 위해 메소드마다 테이블 DROP 후 DB종료
