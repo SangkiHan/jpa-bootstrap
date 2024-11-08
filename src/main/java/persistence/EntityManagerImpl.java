@@ -14,13 +14,13 @@ public class EntityManagerImpl implements EntityManager {
 
     public EntityManagerImpl(JdbcTemplate jdbcTemplate) {
         this.entityLoader = new EntityLoader(jdbcTemplate);
-        this.entityPersister = new EntityPersister(jdbcTemplate);
+        this.entityPersister = new EntityPersister();
         this.persistenceContext = new PersistenceContextImpl();
     }
 
     public EntityManagerImpl(PersistenceContext persistenceContext, JdbcTemplate jdbcTemplate) {
         this.entityLoader = new EntityLoader(jdbcTemplate);
-        this.entityPersister = new EntityPersister(jdbcTemplate);
+        this.entityPersister = new EntityPersister();
         this.persistenceContext = persistenceContext;
     }
 
